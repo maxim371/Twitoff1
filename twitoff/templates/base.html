@@ -8,13 +8,11 @@
 
     <body>
         <h1> Twitoff is so cool!</h1>
+        {% block for Content %}
         <p> Content goes here...</p>
-
-        <ul>
-            {% for user in users %}
-            <li>{{user.name}}</li>
-            {% endfor %}
-        </ul>
+        {% endblock %}
+       
+        
 
 
     </body>
