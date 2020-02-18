@@ -25,11 +25,11 @@ def create_app():
         return render_template('base.html', title='Home', users=users)
 
     @app.route('/user', methods=['POST'])
-    @app.route('/user/<name>', method=['GET'])
+    @app.route('/user/<name>', methods=['GET'])
     def user(name=None, message=''):
         message = ''
         import pdb; pdb.set_trace()
-        #name=name or request.values['User_name']
+        name=name or request.values['User_name']
         try:
             if request.method == "POST":
                 add_or_update_user(name)
